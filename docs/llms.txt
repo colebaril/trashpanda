@@ -212,6 +212,8 @@ cite_packages(format = "rmd")
   : clean_data
 - [`extract_table()`](https://colebaril.github.io/trashpanda/reference/extract_table.md)
   : Look for and extract a table anywhere within an Excel sheet.
+- [`extract_table_csv()`](https://colebaril.github.io/trashpanda/reference/extract_table_csv.md)
+  : Look for and extract a table anywhere within a CSV file.
 - [`list_data_files()`](https://colebaril.github.io/trashpanda/reference/list_data_files.md)
   : List data files in nested folders
 - [`load_quarto_theme()`](https://colebaril.github.io/trashpanda/reference/load_quarto_theme.md)

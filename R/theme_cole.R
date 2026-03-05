@@ -3,8 +3,6 @@
 #' A `ggplot2` theme styled to resemble old parchment and ink, giving plots
 #' a vintage, manuscript-like appearance.
 #' @param remove_grid Logical. If TRUE, removes all grid lines.
-#' @param show_axis_lines Shows axis lines, text, titles and ticks. Choose from "all", "none", "bottom", "top", "right", "left"; default: 
-#' c("bottom", "left"). 
 #' @param base_size Base text size. Default 12.
 #' @param base_family Base font family. Default "sans".
 #' @param dark Logical. If TRUE, plot is transformed to a dark theme.
@@ -40,7 +38,6 @@
 theme_cole <- function(base_size = 12, 
                        base_family = "sans", 
                        remove_grid = FALSE, 
-                       show_axis_lines = c("bottom", "left"),  
                        dark = FALSE,
                        transparent = FALSE) {
   
@@ -64,75 +61,6 @@ theme_cole <- function(base_size = 12,
       panel.grid.minor.x = element_blank(),
       panel.grid.minor.y = element_blank()
     )
-  }
-  
-  if (!is.null(show_axis_lines)) {
-    
-    # ---- NEW: explicit "none" option ----
-    if ("none" %in% show_axis_lines) {
-      th <- th + ggplot2::theme(
-        axis.line.x.bottom = ggplot2::element_blank(),
-        axis.line.x.top    = ggplot2::element_blank(),
-        axis.line.y.left   = ggplot2::element_blank(),
-        axis.line.y.right  = ggplot2::element_blank(),
-        panel.border       = ggplot2::element_blank()
-      )
-      
-    } else {
-    
-    # Resolve "all" shortcut
-    axes <- if ("all" %in% show_axis_lines) {
-      c("bottom", "top", "left", "right")
-    } else {
-      show_axis_lines
-    }
-    
-    
-    
-    # Determine line color based on dark mode
-    line_color <- if (dark) "white" else "black"
-    
-    # Add axis lines and conditionally remove text/ticks/titles
-    th <- th + ggplot2::theme(
-      # X axes
-      axis.line.x.bottom = if ("bottom" %in% axes) ggplot2::element_line(color = line_color) else ggplot2::element_blank(),
-      axis.line.x.top    = if ("top"    %in% axes) ggplot2::element_line(color = line_color) else ggplot2::element_blank(),
-      axis.text.x.bottom = if ("bottom" %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.text.x.top    = if ("top"    %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.ticks.x.bottom = if ("bottom" %in% axes) ggplot2::element_line() else ggplot2::element_blank(),
-      axis.ticks.x.top    = if ("top"    %in% axes) ggplot2::element_line() else ggplot2::element_blank(),
-      axis.title.x.bottom = if ("bottom" %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.title.x.top    = if ("top"    %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      
-      # Y axes
-      axis.line.y.left  = if ("left"  %in% axes) ggplot2::element_line(color = line_color) else ggplot2::element_blank(),
-      axis.line.y.right = if ("right" %in% axes) ggplot2::element_line(color = line_color) else ggplot2::element_blank(),
-      axis.text.y.left  = if ("left"  %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.text.y.right = if ("right" %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.ticks.y.left  = if ("left"  %in% axes) ggplot2::element_line() else ggplot2::element_blank(),
-      axis.ticks.y.right = if ("right" %in% axes) ggplot2::element_line() else ggplot2::element_blank(),
-      axis.title.y.left  = if ("left"  %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      axis.title.y.right = if ("right" %in% axes) ggplot2::element_text() else ggplot2::element_blank(),
-      
-      # Remove panel border
-      panel.border = ggplot2::element_blank()
-    )
-    
-    # Automatically create secondary axes if top/right requested
-    sec_axes <- list()
-    if ("top" %in% axes)   sec_axes$x <- ggplot2::dup_axis()
-    if ("right" %in% axes) sec_axes$y <- ggplot2::dup_axis()
-    
-    # Return secondary axes as scales if needed
-    if (length(sec_axes) > 0) {
-      th <- list(th,
-                 if (!is.null(sec_axes$x)) ggplot2::scale_x_continuous(sec.axis = sec_axes$x) else NULL,
-                 if (!is.null(sec_axes$y)) ggplot2::scale_y_continuous(sec.axis = sec_axes$y) else NULL
-      )
-    }
-    
-    }
-  
   }
   
   if (dark) {

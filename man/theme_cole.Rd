@@ -8,7 +8,6 @@ theme_cole(
   base_size = 12,
   base_family = "sans",
   remove_grid = FALSE,
-  show_axis_lines = c("bottom", "left"),
   dark = FALSE,
   transparent = FALSE
 )
@@ -19,9 +18,6 @@ theme_cole(
 \item{base_family}{Base font family. Default "sans".}
 
 \item{remove_grid}{Logical. If TRUE, removes all grid lines.}
-
-\item{show_axis_lines}{Shows axis lines, text, titles and ticks. Choose from "all", "none", "bottom", "top", "right", "left"; default:
-c("bottom", "left").}
 
 \item{dark}{Logical. If TRUE, plot is transformed to a dark theme.}
 
