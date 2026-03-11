@@ -58,7 +58,6 @@ a vintage, manuscript-like appearance.</p>
 <span>  base_size <span class="op">=</span> <span class="fl">12</span>,</span>
 <span>  base_family <span class="op">=</span> <span class="st">"sans"</span>,</span>
 <span>  remove_grid <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  show_axis_lines <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bottom"</span>, <span class="st">"left"</span><span class="op">)</span>,</span>
 <span>  dark <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  transparent <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -78,11 +77,6 @@ a vintage, manuscript-like appearance.</p>
 
 <dt id="arg-remove-grid">remove_grid<a class="anchor" aria-label="anchor" href="#arg-remove-grid"></a></dt>
 <dd><p>Logical. If TRUE, removes all grid lines.</p></dd>
-
-
-<dt id="arg-show-axis-lines">show_axis_lines<a class="anchor" aria-label="anchor" href="#arg-show-axis-lines"></a></dt>
-<dd><p>Shows axis lines, text, titles and ticks. Choose from "all", "none", "bottom", "top", "right", "left"; default:
-c("bottom", "left").</p></dd>
 
 
 <dt id="arg-dark">dark<a class="anchor" aria-label="anchor" href="#arg-dark"></a></dt>
@@ -120,9 +114,7 @@ evoke the look of old parchment and handwritten ink. Works with <code>ggplot2</c
 <span class="r-in"><span>       subtitle <span class="op">=</span> <span class="st">"Lorem ipsum"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">theme_cole</span><span class="op">(</span>show_axis_lines <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bottom"</span>, <span class="st">"left"</span><span class="op">)</span>, remove_grid <span class="op">=</span> <span class="cn">TRUE</span>, dark <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="add_caption_cwb.html">add_caption_cwb</a></span><span class="op">(</span><span class="op">)</span> </span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Removed 2 rows containing missing values or values outside the scale range</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> (`geom_point()`).</span>
-<span class="r-plt img"><img src="theme_cole-1.png" alt="" width="700" height="433"></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE,     dark = TRUE):</span> unused argument (show_axis_lines = c("bottom", "left"))</span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">flipper_length_mm</span>, <span class="va">bill_length_mm</span>, fill <span class="op">=</span> <span class="va">species</span>, group <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
@@ -131,9 +123,7 @@ evoke the look of old parchment and handwritten ink. Works with <code>ggplot2</c
 <span class="r-in"><span>       subtitle <span class="op">=</span> <span class="st">"Lorem ipsum"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">theme_cole</span><span class="op">(</span>show_axis_lines <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bottom"</span>, <span class="st">"left"</span><span class="op">)</span>, remove_grid <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="add_caption_cwb.html">add_caption_cwb</a></span><span class="op">(</span><span class="op">)</span> </span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>Removed 2 rows containing missing values or values outside the scale range</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> (`geom_point()`).</span>
-<span class="r-plt img"><img src="theme_cole-2.png" alt="" width="700" height="433"></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE):</span> unused argument (show_axis_lines = c("bottom", "left"))</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

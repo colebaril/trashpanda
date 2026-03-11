@@ -17,6 +17,8 @@
   : Look for and extract a table anywhere within an Excel sheet.
 - [`extract_table_csv()`](https://colebaril.github.io/trashpanda/reference/extract_table_csv.md)
   : Look for and extract a table anywhere within a CSV file.
+- [`get_tidytuesday_meta()`](https://colebaril.github.io/trashpanda/reference/get_tidytuesday_meta.md)
+  : Get TidyTuesday Metadata from GitHub
 - [`list_data_files()`](https://colebaril.github.io/trashpanda/reference/list_data_files.md)
   : List data files in nested folders
 - [`load_quarto_theme()`](https://colebaril.github.io/trashpanda/reference/load_quarto_theme.md)
@@ -29,3 +31,5 @@
   : Cole's colour scales
 - [`theme_cole()`](https://colebaril.github.io/trashpanda/reference/theme_cole.md)
   : Cole's favourite plot theme
+- [`tidytuesday_meta`](https://colebaril.github.io/trashpanda/reference/tidytuesday_meta.md)
+  : TidyTuesday Metadata

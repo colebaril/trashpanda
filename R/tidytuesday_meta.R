@@ -1,0 +1,19 @@
+#' TidyTuesday Metadata
+#'
+#' A dataset of TidyTuesday posts with YAML metadata, code metrics, and plot image names.
+#'
+#' @format A tibble with columns:
+#' \describe{
+#'   \item{file_path}{Path to the .qmd file in the repo}
+#'   \item{title}{Title from YAML}
+#'   \item{date}{Date of the post}
+#'   \item{categories}{Categories from YAML}
+#'   \item{image}{Plot image file name from plot_name object}
+#'   \item{num_lines}{Number of code lines}
+#'   \item{num_comments}{Number of comment lines}
+#'   \item{functions_used}{List of functions called in the code}
+#'   \item{packages}{List of packages loaded}
+#'   \item{plot_types}{List of geom types used}
+#' }
+#' @source <https://github.com/colebaril/tidytuesday>
+"tidytuesday_meta"

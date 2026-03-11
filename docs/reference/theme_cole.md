@@ -10,7 +10,6 @@ theme_cole(
   base_size = 12,
   base_family = "sans",
   remove_grid = FALSE,
-  show_axis_lines = c("bottom", "left"),
   dark = FALSE,
   transparent = FALSE
 )
@@ -29,11 +28,6 @@ theme_cole(
 - remove_grid:
 
   Logical. If TRUE, removes all grid lines.
-
-- show_axis_lines:
-
-  Shows axis lines, text, titles and ticks. Choose from "all", "none",
-  "bottom", "top", "right", "left"; default: c("bottom", "left").
 
 - dark:
 
@@ -71,9 +65,7 @@ ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species, group = 
        subtitle = "Lorem ipsum") +
   theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE, dark = TRUE) +
   add_caption_cwb() 
-#> Warning: Removed 2 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
-
+#> Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE,     dark = TRUE): unused argument (show_axis_lines = c("bottom", "left"))
   
   
 ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species, group = species)) +
@@ -82,7 +74,5 @@ ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species, group = 
        subtitle = "Lorem ipsum") +
   theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE) +
   add_caption_cwb() 
-#> Warning: Removed 2 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
-
+#> Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE): unused argument (show_axis_lines = c("bottom", "left"))
 ```

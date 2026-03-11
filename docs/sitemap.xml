@@ -17,6 +17,7 @@
 <url><loc>https://colebaril.github.io/trashpanda/reference/clean_data.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/extract_table.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/extract_table_csv.html</loc></url>
+<url><loc>https://colebaril.github.io/trashpanda/reference/get_tidytuesday_meta.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/index.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/list_data_files.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/load_quarto_theme.html</loc></url>
@@ -24,5 +25,6 @@
 <url><loc>https://colebaril.github.io/trashpanda/reference/safe_read_data.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/scale_cwb.html</loc></url>
 <url><loc>https://colebaril.github.io/trashpanda/reference/theme_cole.html</loc></url>
+<url><loc>https://colebaril.github.io/trashpanda/reference/tidytuesday_meta.html</loc></url>
 </urlset>
 
