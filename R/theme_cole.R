@@ -21,7 +21,7 @@
 #'   geom_point(shape = 21) +
 #'   labs(title = "Flipper Length vs. Bill Length",
 #'        subtitle = "Lorem ipsum") +
-#'   theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE, dark = TRUE) +
+#'   theme_cole(remove_grid = TRUE, dark = TRUE) +
 #'   add_caption_cwb() 
 #'   
 #'   
@@ -29,7 +29,7 @@
 #'   geom_point(shape = 21) +
 #'   labs(title = "Flipper Length vs. Bill Length",
 #'        subtitle = "Lorem ipsum") +
-#'   theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE) +
+#'   theme_cole(remove_grid = FALSE) +
 #'   add_caption_cwb() 
 #'
 #' @export
@@ -77,13 +77,7 @@ theme_cole <- function(base_size = 12,
       legend.background = element_blank(),
       legend.key = element_blank(),
       legend.text = element_text(color = "white"),
-      legend.title = element_text(color = "white"),
-      
-      axis.line.x.bottom = if (!"none" %in% show_axis_lines)
-        element_line(color = "white") else element_blank(),
-      
-      axis.line.y.left = if (!"none" %in% show_axis_lines)
-        element_line(color = "white") else element_blank()
+      legend.title = element_text(color = "white")
     )
   } else if (transparent) {
     # Transparent backgrounds in light mode
