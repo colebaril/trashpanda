@@ -53,26 +53,25 @@ evoke the look of old parchment and handwritten ink. Works with
 library(ggplot2)
 library(trashpanda)
 library(palmerpenguins)
-#> 
-#> Attaching package: ‘palmerpenguins’
-#> The following objects are masked from ‘package:datasets’:
-#> 
-#>     penguins, penguins_raw
 
 ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species, group = species)) +
   geom_point(shape = 21) +
   labs(title = "Flipper Length vs. Bill Length",
        subtitle = "Lorem ipsum") +
-  theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE, dark = TRUE) +
+  theme_cole(remove_grid = TRUE, dark = TRUE) +
   add_caption_cwb() 
-#> Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = TRUE,     dark = TRUE): unused argument (show_axis_lines = c("bottom", "left"))
+#> Warning: Removed 2 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+
   
   
 ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species, group = species)) +
   geom_point(shape = 21) +
   labs(title = "Flipper Length vs. Bill Length",
        subtitle = "Lorem ipsum") +
-  theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE) +
+  theme_cole(remove_grid = FALSE) +
   add_caption_cwb() 
-#> Error in theme_cole(show_axis_lines = c("bottom", "left"), remove_grid = FALSE): unused argument (show_axis_lines = c("bottom", "left"))
+#> Warning: Removed 2 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+
 ```

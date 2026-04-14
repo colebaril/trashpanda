@@ -56,45 +56,11 @@ By default:
 
 ---
 
-### Axis control
-
-A central feature of `theme_cole()` is explicit axis control via `show_axis_lines`.
-
-Valid values are:
-
-* `"bottom"`, `"top"`, `"left"`, `"right"`
-* `"all"`
-* `"none"`
-
-#### Example: bottom and left only
-
-```{r}
-p + theme_cole(show_axis_lines = c("bottom", "left"))
-```
-
-#### Example: all axes
-
-```{r}
-p + theme_cole(show_axis_lines = "all")
-```
-
-When `top` or `right` axes are requested, secondary axes are automatically created using `dup_axis()`.
-
-#### Example: no axes
-
-```{r}
-p + theme_cole(show_axis_lines = "none")
-```
-
-This removes axis lines, ticks, text, and panel borders entirely.
-
----
-
 ### Grid control
 
 Grid lines can be fully removed using `remove_grid = TRUE`.
 
-```{r}
+```{r, rm_grid}
 p + theme_cole(remove_grid = TRUE)
 ```
 

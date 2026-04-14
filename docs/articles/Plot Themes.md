@@ -58,50 +58,6 @@ By default:
 
 ------------------------------------------------------------------------
 
-### Axis control
-
-A central feature of
-[`theme_cole()`](https://colebaril.github.io/trashpanda/reference/theme_cole.md)
-is explicit axis control via `show_axis_lines`.
-
-Valid values are:
-
-- `"bottom"`, `"top"`, `"left"`, `"right"`
-- `"all"`
-- `"none"`
-
-#### Example: bottom and left only
-
-``` r
-p + theme_cole(show_axis_lines = c("bottom", "left"))
-```
-
-![](Plot%20Themes_files/figure-html/unnamed-chunk-2-1.png)
-
-#### Example: all axes
-
-``` r
-p + theme_cole(show_axis_lines = "all")
-```
-
-![](Plot%20Themes_files/figure-html/unnamed-chunk-3-1.png)
-
-When `top` or `right` axes are requested, secondary axes are
-automatically created using
-[`dup_axis()`](https://ggplot2.tidyverse.org/reference/sec_axis.html).
-
-#### Example: no axes
-
-``` r
-p + theme_cole(show_axis_lines = "none")
-```
-
-![](Plot%20Themes_files/figure-html/unnamed-chunk-4-1.png)
-
-This removes axis lines, ticks, text, and panel borders entirely.
-
-------------------------------------------------------------------------
-
 ### Grid control
 
 Grid lines can be fully removed using `remove_grid = TRUE`.
@@ -110,7 +66,7 @@ Grid lines can be fully removed using `remove_grid = TRUE`.
 p + theme_cole(remove_grid = TRUE)
 ```
 
-![](Plot%20Themes_files/figure-html/unnamed-chunk-5-1.png)
+![](Plot%20Themes_files/figure-html/rm_grid-1.png)
 
 This is useful for presentation-style figures or plots intended to
 resemble hand-drawn charts.
@@ -126,7 +82,7 @@ preserving contrast and readability.
 p + theme_cole(dark = TRUE)
 ```
 
-![](Plot%20Themes_files/figure-html/unnamed-chunk-6-1.png)
+![](Plot%20Themes_files/figure-html/unnamed-chunk-2-1.png)
 
 Dark mode changes:
 
@@ -147,7 +103,7 @@ can be requested:
 p + theme_cole(transparent = TRUE)
 ```
 
-![](Plot%20Themes_files/figure-html/unnamed-chunk-7-1.png)
+![](Plot%20Themes_files/figure-html/unnamed-chunk-3-1.png)
 
 This affects:
 
@@ -187,7 +143,7 @@ ggplot(penguins, aes(flipper_length_mm, bill_length_mm, fill = species)) +
   theme_cole(remove_grid = TRUE)
 ```
 
-![](Plot%20Themes_files/figure-html/unnamed-chunk-8-1.png)
+![](Plot%20Themes_files/figure-html/unnamed-chunk-4-1.png)
 
 This configuration emphasizes data points and labels while minimizing
 distractions.
@@ -203,7 +159,7 @@ ggplot(penguins, aes(flipper_length_mm, bill_length_mm, color = species)) +
   theme_cole(dark = TRUE, remove_grid = TRUE)
 ```
 
-![](Plot%20Themes_files/figure-html/unnamed-chunk-9-1.png)
+![](Plot%20Themes_files/figure-html/unnamed-chunk-5-1.png)
 
 ------------------------------------------------------------------------
 

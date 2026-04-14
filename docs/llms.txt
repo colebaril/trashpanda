@@ -220,6 +220,8 @@ cite_packages(format = "rmd")
   : List data files in nested folders
 - [`load_quarto_theme()`](https://colebaril.github.io/trashpanda/reference/load_quarto_theme.md)
   : Load a Trashpanda Quarto theme into the current project
+- [`plot_preview()`](https://colebaril.github.io/trashpanda/reference/plot_preview.md)
+  : Save Plot and Generate Preview Card
 - [`read_data_tree()`](https://colebaril.github.io/trashpanda/reference/read_data_tree.md)
   : Read all data files from a folder tree safely
 - [`safe_read_data()`](https://colebaril.github.io/trashpanda/reference/safe_read_data.md)

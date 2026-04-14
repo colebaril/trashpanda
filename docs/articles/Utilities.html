@@ -74,7 +74,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Utilities</h1>
                         <h4 data-toc-skip class="author">Cole Baril</h4>
             
-            <h4 data-toc-skip class="date">2026-03-10</h4>
+            <h4 data-toc-skip class="date">2026-04-13</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/colebaril/trashpanda/blob/HEAD/vignettes/Utilities.Rmd" class="external-link"><code>vignettes/Utilities.Rmd</code></a></small>
       <div class="d-none name"><code>Utilities.Rmd</code></div>
@@ -209,6 +209,29 @@ files.</p>
 </div>
 </div>
 <div class="section level2">
+<h2 id="generating-image-preview-cards-with-plot_preview">3. Generating image preview cards with
+<code>plot_preview()</code><a class="anchor" aria-label="anchor" href="#generating-image-preview-cards-with-plot_preview"></a>
+</h2>
+<p>I maintain several Quarto sites which all use preview images for
+cards. The following function can be used to generate a preview image
+from a plot in the script and automatically saves the image to the
+appropriate folder when Quarto renders the document. The function saves
+a large-scale image in addition to a smaller preview image scaled to
+Quarto card size. You can optionally include the larger image in the
+Quarto output and set image sizes.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_preview.html">plot_preview</a></span><span class="op">(</span></span>
+<span>  <span class="va">plot</span>,</span>
+<span>  filename <span class="op">=</span> <span class="st">"percent_complete.png"</span>,</span>
+<span>  width <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>  height <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  dpi <span class="op">=</span> <span class="fl">400</span>,</span>
+<span>  preview <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  include <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<hr>
+</div>
+<div class="section level2">
 <h2 id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
 </h2>
 <p>The utilities vignette demonstrates:</p>
@@ -218,6 +241,9 @@ files.</p>
 </li>
 <li>How to integrate precompiled Trashpanda Quarto themes into your
 projects with <code><a href="../reference/load_quarto_theme.html">load_quarto_theme()</a></code>
+</li>
+<li>Auto-generation of preview images for Quarto cards using
+<code><a href="../reference/plot_preview.html">plot_preview()</a></code>
 </li>
 </ul>
 <p>These tools complement the visualization and workflow functions in

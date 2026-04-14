@@ -139,6 +139,30 @@ files.
 
 ------------------------------------------------------------------------
 
+## 3. Generating image preview cards with `plot_preview()`
+
+I maintain several Quarto sites which all use preview images for cards.
+The following function can be used to generate a preview image from a
+plot in the script and automatically saves the image to the appropriate
+folder when Quarto renders the document. The function saves a
+large-scale image in addition to a smaller preview image scaled to
+Quarto card size. You can optionally include the larger image in the
+Quarto output and set image sizes.
+
+``` r
+plot_preview(
+  plot,
+  filename = "percent_complete.png",
+  width = 10,
+  height = 12,
+  dpi = 400,
+  preview = TRUE,
+  include = TRUE
+)
+```
+
+------------------------------------------------------------------------
+
 ## Summary
 
 The utilities vignette demonstrates:
@@ -148,6 +172,8 @@ The utilities vignette demonstrates:
 - How to integrate precompiled Trashpanda Quarto themes into your
   projects with
   [`load_quarto_theme()`](https://colebaril.github.io/trashpanda/reference/load_quarto_theme.md)
+- Auto-generation of preview images for Quarto cards using
+  [`plot_preview()`](https://colebaril.github.io/trashpanda/reference/plot_preview.md)
 
 These tools complement the visualization and workflow functions in the
 package, supporting reproducible research and presentation-ready
